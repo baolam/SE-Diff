@@ -1,5 +1,33 @@
 # [ICLR 2026] SE-Diff: Simulator and Experience Enhanced Diffusion Model for Comprehensive ECG Generation
 
+## Prerequisites
+
+Put the required pretrained weights, latent data, and simulator prior files under `./prerequisites/`.
+
+## Install
+
+`pip install -r requirements.txt`
+
+## Training
+
+```bash
+python train.py --config configs/train.json
+```
+
+## Generation
+
+```bash
+python generate.py \
+  --output_dir ./outputs/generation
+```
+
+If you want evaluation output:
+
+```bash
+python evaluate.py \
+  --json_path ./outputs/generation/evaluation_output.json \
+  --output_dir ./outputs/evaluation
+```
 
 ## Citation
 
