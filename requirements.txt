@@ -1,0 +1,10 @@
+torch
+diffusers
+numpy
+matplotlib
+tqdm
+openai
+scipy
+scikit-learn
+neurokit2
+wfdb
