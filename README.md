@@ -1,5 +1,7 @@
 # [ICLR 2026] SE-Diff: Simulator and Experience Enhanced Diffusion Model for Comprehensive ECG Generation
 
+![SE-Diff](figure/SE-Diff.png)
+
 ## Prerequisites
 
 Put the required pretrained weights, latent data, and simulator prior files under `./prerequisites/`.
