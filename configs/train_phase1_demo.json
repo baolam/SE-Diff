@@ -1,0 +1,21 @@
+{
+  "meta": {
+    "exp_name": "SE-Diff-Phase1-Demo",
+    "exp_type": "phase1_demo",
+    "device": "cpu"
+  },
+  "dependencies": {
+    "dataset_dir": "./prerequisites/raw_ecg_data",
+    "checkpoints_dir": "./checkpoints",
+    "output_latent_path": "./prerequisites/training_latent_dataset.pt"
+  },
+  "hyper_para": {
+    "epochs": 3,
+    "lr": 1e-4,
+    "batch_size": 8,
+    "kld_weight": 1e-4,
+    "mini_decoder_weight": 1.0,
+    "num_workers": 0,
+    "save_every": 1
+  }
+}

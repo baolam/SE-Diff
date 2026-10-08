@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "exp_name": "SE-Diff-Phase2-Demo",
+    "exp_type": "phase2_demo",
+    "condition": true,
+    "vae_latent": true,
+    "device": "cpu"
+  },
+  "dependencies": {
+    "dataset_path": "./prerequisites/training_latent_dataset.pt",
+    "checkpoints_dir": "./checkpoints",
+    "vae_path": "./prerequisites/vae_decoder.pth",
+    "mini_decoder_path": "./prerequisites/mini_decoder.pth",
+    "simulator_prior_path": "./prerequisites/simulator_prior.pkl"
+  },
+  "hyper_para": {
+    "epochs": 20,
+    "lr": 1e-4,
+    "batch_size": 4,
+    "num_train_steps": 1000,
+    "unet_kernel_size": 7,
+    "unet_num_level": 7,
+    "beta_start": 0.00085,
+    "beta_end": 0.0120,
+    "beta_schedule": "cosine"
+  },
+  "inference_setting": {
+    "inference_timestep": 1000,
+    "gen_batch": 1,
+    "save_img": true,
+    "verbose": false,
+    "save_path": "./outputs/generation",
+    "unet_path": "./checkpoints/phase2_demo_1/best_model.pth",
+    "text": "sinus rhythm",
+    "age": 50,
+    "hr": 75,
+    "gender": "M"
+  }
+}

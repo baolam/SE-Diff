@@ -1,0 +1,29 @@
+{
+  "meta": {
+    "exp_name": "SE-Diff-Phase1",
+    "exp_type": "phase1",
+    "device": "cuda:0"
+  },
+  "dependencies": {
+    "dataset_dir": "./prerequisites/raw_ecg_data",
+    "checkpoints_dir": "./checkpoints",
+    "output_latent_path": "./prerequisites/training_latent_dataset.pt"
+  },
+  "hyper_para": {
+    "epochs": 100,
+    "lr": 1e-4,
+    "batch_size": 64,
+    "kld_weight": 1e-4,
+    "mini_decoder_weight": 1.0,
+    "num_workers": 4,
+    "save_every": 10
+  },
+  "_comment_demo": {
+    "note": "For a mini demo with 50 MIMIC-IV-ECG records, reduce batch_size to 8 and epochs to 20.",
+    "demo_overrides": {
+      "epochs": 20,
+      "batch_size": 8,
+      "num_workers": 0
+    }
+  }
+}
